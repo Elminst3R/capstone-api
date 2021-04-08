@@ -86,49 +86,4 @@ router.delete('/categories/:categoryId/questions/:questionId', async function (r
   res.json(question);
 });
 
-
-// let stock = await Portfolio.destroy({ where: { id: req.params.id } });
-//   // update the wallet happens here
-//   // res.json(stock);
-//   res.json(stock);
-
-
-// let body = req.body;
-// body.categoryId = req.params.categoryId;
-// let question = await Question.create(body);
-// res.json(question);
-
-
-// router.delete('/:id', async function (req, res, next) {
-//   // console.log(req.params)
-
-//   let currentStock = await Portfolio.findOne({ where: { id: req.params.id } });
-//   if (currentStock) {
-//     let symbol = currentStock.symbol;
-//     let quantity = currentStock.quantity;
-//     const data = await yahooStockPrices.getCurrentData(symbol);
-//     // console.log(data)
-
-//     let cashEarnedFromStockSale = parseInt(parseInt(quantity) * data.price);
-
-//     let currentWallet = await Wallet.findOne({});
-//     if (currentWallet) {
-//       let currentWalletValue = parseInt(currentWallet.value);
-//       let newWalletValue = currentWalletValue + cashEarnedFromStockSale;
-//       console.log('newWalletValue', newWalletValue);
-//       await currentWallet.update({ value: newWalletValue })
-//     }
-
-//     let stock = await Portfolio.destroy({ where: { id: req.params.id } });
-//     // update the wallet happens here
-//     // res.json(stock);
-//     res.json(stock);
-
-//   }
-//   // // let stock = await Portfolio.destroy({where: {id: req.params.id}});
-//   // // update the wallet happens here
-//   // // res.json(stock);
-//   // res.json({});
-// });
-
 module.exports = router;
