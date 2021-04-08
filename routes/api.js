@@ -80,6 +80,9 @@ router.delete('/categories/:categoryId/questions/:questionId', async function (r
   console.log(req.params)
   // this destroys all questions
   let question = await Question.destroy({ where: { categoryId: req.params.categoryId } });
+
+  // this doesn't work...
+  // let question = await Question.destroy({ where: { questionId: req.params.queationId } });
   res.json(question);
 });
 
